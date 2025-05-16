@@ -5,7 +5,6 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "ignoreCommand": "git check-ignore",
   "routes": [
     {
       "src": "/(.*)",
