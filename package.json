@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@coral-xyz/anchor": "^0.31.1",
+    "@keystonehq/sdk": "^0.22.1",
     "@solana/spl-token": "^0.4.13",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
@@ -16,6 +17,7 @@
     "next": "14.0.4",
     "next-themes": "^0.2.1",
     "pino-pretty": "^13.0.0",
+    "qrcode.react": "^4.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwind-merge": "^3.3.0",
@@ -36,5 +38,16 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "qrcode.react": "4.2.0",
+    "**/react": "18.2.0",
+    "**/react-dom": "18.2.0"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
