@@ -7,7 +7,15 @@ import { Campaign, Reward } from './solana';
 // Import the IDL from the generated file
 // In a real production setup, you'd bundle the IDL with your frontend 
 // or fetch it from a known location
-const idl = require('../../cpop-program/target/idl/cpop_program.json');
+let idl;
+try {
+  // Try to import from the original location first
+  idl = require('../../cpop-program/target/idl/cpop_program.json');
+} catch (error) {
+  // Fallback to the local copy for deployments (Netlify/Vercel)
+  console.log("Using fallback IDL location");
+  idl = require('./idl/cpop_program.json');
+}
 
 // Configure Solana connection - use devnet for compatibility with Phantom wallet
 const SOLANA_RPC_URL = 'https://api.devnet.solana.com';

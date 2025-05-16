@@ -35,6 +35,10 @@ next-env.d.ts
 test-ledger/
 .anchor/
 target/
+# But keep the IDL files
+!cpop-program/target/
+cpop-program/target/*
+!cpop-program/target/idl/
 
 # IDE
 .idea/

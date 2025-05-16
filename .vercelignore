@@ -12,4 +12,13 @@ test-ledger
 # Large files and directories
 cpop-program/node_modules
 cpop-interface/node_modules
-cpop-program/target 
+cpop-program/target/deploy
+cpop-program/target/debug
+cpop-program/target/release
+cpop-program/target/bpfel-unknown-unknown
+cpop-program/target/rls
+cpop-program/target/package
+cpop-program/target/.rustc_info.json
+cpop-program/target/.rustdoc-fingerprint.json
+# Keep the IDL file
+# cpop-program/target/idl 
