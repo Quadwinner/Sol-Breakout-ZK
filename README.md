@@ -1,3 +1,103 @@
+# Sol-Breakout-ZK
+
+A Next.js application that uses Zero Knowledge proofs with Solana state compression for issuing tokens and validating participation.
+
+## Prerequisites
+
+- Node.js (v16 or later)
+- npm or yarn
+- Rust and Cargo (for Solana program development)
+- Solana CLI tools
+- Anchor framework
+
+## Project Structure
+
+- `/app`: Next.js frontend application
+- `/cpop-program`: Compressed Proof of Participation Solana program
+- `/solana-program`: Core Solana program for ZK verification
+- `/cpop-interface`: Interface for the cPOP program
+
+## Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Quadwinner/Sol-Breakout-ZK.git
+cd Sol-Breakout-ZK
+```
+
+### 2. Install frontend dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set up local Solana validator (for development)
+
+```bash
+solana-test-validator
+```
+
+### 4. Install and build the cPOP program
+
+```bash
+cd cpop-program
+npm install
+# or
+yarn install
+anchor build
+```
+
+### 5. Deploy the cPOP program (development)
+
+```bash
+anchor deploy
+```
+
+### 6. Run the frontend application
+
+```bash
+cd ..
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at [http://localhost:3000](http://localhost:3000).
+
+## Features
+
+- Create and manage token distribution campaigns
+- Generate ZK proofs of participation
+- User-friendly UI for campaign management
+- Wallet integration for Solana
+- State compression for efficient token issuance
+
+## Testing
+
+To run tests for the cPOP program:
+
+```bash
+cd cpop-program
+anchor test
+```
+
+## Development Workflow
+
+1. Start the local Solana validator
+2. Deploy the cPOP program
+3. Run the frontend application
+4. Make changes to the code
+5. Test changes with the test suite
+
+## Common Issues
+
+- If you encounter errors with the Solana connection, ensure your local validator is running
+- For wallet connection issues, make sure you have a Solana wallet extension installed in your browser
+- If program deployment fails, check your Solana CLI configuration
+
 # cPOP Interface: Compressed Proof of Participation
 
 A platform for creating and distributing compressed proof of participation tokens using ZK Compression on Solana. This solution enables event organizers to distribute participation rewards at a fraction of the cost of traditional tokens.
